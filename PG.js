@@ -112,6 +112,17 @@ function getPasswordOptions() {
     return;
   }
 
+  var hasSpecialCharacters = confirm("Would you like your password to contain special characters?")
+
+  var hasUpperCasedCharacters = confirm("Would you like your password to contain upper cased characters?");
+
+  var hasLowerCasedCharacters = confirm("Would you like your password to contain lower cased characters?");
+
+  var hasNumericCharacters = confirm("Would you like your password to contain numeric characters?");
+if (hasNumericCharacters === false && hasSpecialCharacters === false && hasUpperCasedCharacters === false && hasLowerCasedCharacters === false) {
+    alert("Must contain at least one character type")
+    return
+}
 
    // Object to store user input
    var passwordOptions = {
@@ -131,12 +142,17 @@ function getPasswordOptions() {
 
 // Function for getting a random element from an array
 //Complete your function here...
-
+function getrandomarray(xarray) {
+    var randomnumber = Math.floor(Math.random() * xarray.length)
+    var randomarray = xarray[randomnumber]
+    return randomarray
+    }
 // Function to generate password with user input
 function generatePassword() {
-  var options = getPasswordOptions();
-
-  var result = [];
+    var options = getPasswordOptions();
+    var result = [];
+    var optioncombos = [];
+    var forsureoption = [];
 
   //Complete your function here...
 }
